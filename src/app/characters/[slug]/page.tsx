@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import type { RMCharacter, RMListResponse } from '@/types/rick-and-morty';
 
-export const revalidate = 60 * 60 * 24 * 10; // ISR: 10 días
+export const revalidate = 864000; // ISR: 10 días (valor literal requerido por Next)
 
 interface PageProps {
   params: { slug: string } | Promise<{ slug: string }>;
